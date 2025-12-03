@@ -59,7 +59,6 @@
 /* Стили шапки страницы */
 .header {
   display: grid;
-  max-width: 100px;
   grid-template-columns: 2fr 1fr 2fr; /* Три колонки одинаковой ширины */
   align-items: center;
   padding: 92px 51px 96px 51px;
