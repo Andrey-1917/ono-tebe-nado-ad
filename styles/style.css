@@ -1,20 +1,5 @@
 
-/* Классы для выравнивания текста */
 
-.text-left {
-  display: block;
-  text-align: left; /* Выравнивание по левому краю */
-}
-
-.text-center {
-  display: block;
-  text-align: center; /* Выравнивание по центру */
-}
-
-.text-right {
-  display: block;
-  text-align: right; /* Выравнивание по правому краю */
-}
 
 /* Затемняющий оверлей для наложения на фоновые изображения */
 .overlay {
@@ -52,17 +37,14 @@
   cursor: pointer;
 }
 
-.cta-button:hover {
-  transform: scale(1.03); /* Увеличение при наведении */
-}
-
 /* Стили шапки страницы */
 .header {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr; /* Три колонки одинаковой ширины */
   align-items: center;
-  padding: 92px 51px 96px 51px;
+  padding: 95px 50px 0px 50px;
   max-width: 1100px;
+  height: 293px;
   margin: 0 auto;
 }
 
@@ -89,10 +71,6 @@
   line-height: normal;
   text-underline-offset: 5px; /* Отступ подчеркивания */
   transition: text-underline-offset 0.3s ease;
-}
-
-.header-nav-link:hover {
-  text-underline-offset: 7px; /* Увеличиваем отступ при наведении */
 }
 
 .header-nav-link_active {
@@ -131,7 +109,7 @@
 .cover {
   position: relative;
   z-index: 1;
-  padding: 173px 50px 50px 50px;
+  padding: 165px 50px 50px 50px;
   color: #fff;
   background-color: #a7a7a7; /* Фолбек цвет если изображение не загрузится */
   background-image: url("../images/cover.jpg");
@@ -146,13 +124,31 @@
 .main-heading {
   display: flex;
   flex-direction: column;
+  max-width: 1000px;
+  max-height: 385px;
   row-gap: 24px;
   margin-bottom: 135px;
   font-weight: 700;
   font-size: 100px;
   line-height: 100%;
-  letter-spacing: 25px; /* Большой межбуквенный интервал */
+  letter-spacing: 0.3em; /* Большой межбуквенный интервал */
   text-transform: uppercase;
+}
+
+/* Классы для выравнивания текста */
+
+.text-left {
+  text-align: left; /* Выравнивание по левому краю */
+}
+
+.text-center {
+  text-align: center; /* Выравнивание по центру */
+    margin-left: 0.3em;
+}
+
+.text-right {
+  text-align: right; /* Выравнивание по правому краю */
+    margin-right: -0.3em;
 }
 
 /* Контент герой-секции */
@@ -169,14 +165,14 @@
   line-height: 28px;
   text-align: left;
   text-transform: uppercase;
-  word-spacing: 18px; /* Большой межсловный интервал */
+  word-spacing: 0.9em; /* Большой межсловный интервал */
 }
 
 /* Секция аукционов */
 .lots {
   padding: 179px 50px 50px 50px;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 24px auto 24px;
 }
 
 .lots-title {
@@ -208,7 +204,7 @@
 
 /* Ссылка "Посмотреть больше" */
 .view-more-link {
-  margin-left: 40px;
+  margin-left: -10px;
   font-weight: 400;
   font-size: 20px;
   line-height: normal;
@@ -227,10 +223,6 @@
   height: 100%;
   text-decoration: none;
   transition: transform 0.3s ease;
-}
-
-.lot-link:hover {
-  transform: translateY(-5px); /* Поднимаем карточку при наведении */
 }
 
 .lot-card {
@@ -285,9 +277,10 @@
 .about {
   display: grid;
   grid-template-columns: min-content 1fr; /* Две колонки - логотип и контент */
-  column-gap: 28px;
-  padding: 130px 50px 90px 50px;
-  max-width: 1100px;
+  column-gap: 72px;
+  margin: 130px 24px 0 24px;
+  max-width: 1052px;
+  max-height: 595px;
   margin: 0 auto;
 }
 
@@ -295,7 +288,7 @@
   display: flex;
   width: 240px;
   height: 240px;
-  margin: 0px 50px 0px 50px;
+  margin: 35px 0px 0px 50px;
   border-radius: 50%; /* Круглый логотип */
   background: #000;
 }
@@ -308,7 +301,7 @@
 }
 
 .about-title {
-  margin-top: 102px;
+  margin-top: 133px;
   margin-bottom: 100px;
   font-weight: 700;
   font-size: 40px;
@@ -319,10 +312,7 @@
 .about-text {
   font-weight: 400;
   font-size: 20px;
-  line-height: normal;
-}
-
-.about-text:not(:last-of-type) {
+  line-height: 24px;
   margin-bottom: 25px; /* Отступ между параграфами */
 }
 
@@ -331,7 +321,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Три колонки */
   align-items: start;
-  padding: 90px 50px;
+  padding: 180px 50px 82px 50px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -341,9 +331,6 @@
   transition: text-underline-offset 0.3s ease;
 }
 
-.footer-contact-link:hover {
-  text-underline-offset: 7px;
-}
 
 .footer-nav-list {
   text-align: center;
@@ -358,10 +345,6 @@
   transition: text-underline-offset 0.3s ease;
 }
 
-.footer-nav-link:hover {
-  text-underline-offset: 4px;
-}
-
 .footer-nav-link_active {
   text-decoration: none;
 }
@@ -372,10 +355,6 @@
   width: 48px;
   height: 48px;
   transition: transform 0.3s ease;
-}
-
-.footer-social-link:hover {
-  transform: translateY(-3px); /* Поднимаем иконку при наведении */
 }
 
 .footer-social-links {
